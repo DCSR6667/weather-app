@@ -9,7 +9,7 @@ function some()
     var value=input.value;
     var value1=value.split(',')[0];
     
-    fetch(`http://localhost:3000/api?location=${value}`).then(result=>
+    fetch(`/api?location=${value}`).then(result=>
     {
         
         return result.json();

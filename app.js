@@ -3,6 +3,7 @@ const path=require('path');
 const request=require('request');
 const getWeather=require('./src/api');
 const app=express();
+const port=process.env.PORT || 3000;
 app.set('view engine','ejs');
 app.set('views','views');
 app.use(express.static(path.join(__dirname,'/public')));
@@ -44,7 +45,7 @@ app.get('/*',(req,res,next)=>
 });
 
 
-app.listen(3000,() =>{
+app.listen(port,() =>{
 
-    console.log("server listening");
+    console.log("server is on port"+port);
 });
